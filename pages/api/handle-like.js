@@ -5,8 +5,6 @@ sanityClient.config({
 });
 
 export default async function likeButtonHandler(req, res) {
-  console.log('Test')
-  console.log(process.env.SANITY_STUDIO_TOKEN)
   const { _id } = JSON.parse(req.body);
   const data = await sanityClient
     .patch(_id)
